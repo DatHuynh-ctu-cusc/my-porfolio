@@ -1,0 +1,61 @@
+#home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/logo.jpg");
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 40px;
+    border-radius: 12px;
+
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: auto;
+}
+
+nav {
+    width: 100%;
+    background-color:black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #00ffff;
+}
