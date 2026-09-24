@@ -13,13 +13,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     background-image: url("img/logo.jpg");
+=======
+    /* TODO: path is wrong - img/ is next to style.css, not one folder up, so "../img/logo.jpg" won't load. Use "img/logo.jpg" instead. */
+    background-image: url("../img/logo.jpg");
+>>>>>>> df8cfc2c19f7e6ecf5e4ee3d6aa82126b082f16b
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .content {
+<<<<<<< HEAD
+=======
+    /* TODO: "fixed" pins this box to the screen so it won't scroll with the page and may overlap other sections later. Try "relative" or removing position instead. */
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+>>>>>>> df8cfc2c19f7e6ecf5e4ee3d6aa82126b082f16b
     text-align: center;
     color: black;
     background-color: rgba(0, 0, 0, 0.45);
@@ -37,7 +50,12 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+<<<<<<< HEAD
     z-index: 10;
+=======
+    /* TODO: "auto" is the default value and doesn't stack anything above other elements. Use a number like z-index: 10 to make sure the nav stays on top. */
+    z-index: auto;
+>>>>>>> df8cfc2c19f7e6ecf5e4ee3d6aa82126b082f16b
 }
 nav {
     width: 100%;
