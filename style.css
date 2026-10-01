@@ -8,38 +8,35 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+section {
+    scroll-margin-top: 60px;
+}
 #home {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
+
     background-image: url("img/logo.jpg");
-=======
+
     /* TODO: path is wrong - img/ is next to style.css, not one folder up, so "../img/logo.jpg" won't load. Use "img/logo.jpg" instead. */
     background-image: url("../img/logo.jpg");
->>>>>>> df8cfc2c19f7e6ecf5e4ee3d6aa82126b082f16b
+
     background-size: auto;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .content {
-<<<<<<< HEAD
-=======
+
     /* TODO: "fixed" pins this box to the screen so it won't scroll with the page and may overlap other sections later. Try "relative" or removing position instead. */
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
->>>>>>> df8cfc2c19f7e6ecf5e4ee3d6aa82126b082f16b
     text-align: center;
-    color: black;
+    color: white;
     background-color: rgba(0, 0, 0, 0.45);
     padding: 40px;
     border-radius: 12px;
-
 }
+
 
 /* =========================
    NAVIGATION
@@ -50,12 +47,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-<<<<<<< HEAD
     z-index: 10;
-=======
-    /* TODO: "auto" is the default value and doesn't stack anything above other elements. Use a number like z-index: 10 to make sure the nav stays on top. */
-    z-index: auto;
->>>>>>> df8cfc2c19f7e6ecf5e4ee3d6aa82126b082f16b
 }
 nav {
     width: 100%;
@@ -79,6 +71,9 @@ nav a {
 nav a:hover {
     color: #00ffff;
 }
+nav a.active {
+    color: #00ffff;
+}
 /* =========================
    ABOUT
    ========================= */
@@ -97,4 +92,347 @@ nav a:hover {
     display: grid;
     grid-template-columns: 180px 1fr;
     gap: 50px;
+}
+
+/* =========================
+   RESUME
+   ========================= */
+#resume{
+    min-height: 100vh;
+     background-color: #1e1e1e;
+    color: white;
+    padding: 100px 40px;
+   }
+
+#resume h2{
+    text-align: center;
+    font-size: 32px;
+    margin: 0 0 60px 0;
+}
+.resume-title h3 {
+    display: inline-block;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #00ffff;
+}
+.resume-time {
+    font-size: 14px;
+    color: #00ffff;
+    font-style: italic;
+}
+
+.resume-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.resume-section {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid #333;
+}
+.resume-content {
+    width: 100%;
+}
+.resume-item {
+    margin-bottom: 30px;
+}
+.resume-item p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+.resume-item:last-child {
+    margin-bottom: 0;
+}
+.resume-item h4 {
+    margin: 0 0 6px 0;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 40px;
+}
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+.skill-bar {
+    width: 100%;
+    height: 7px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.skill-progress {
+    height: 100%;
+    background-color: #00ffff;
+    border-radius: 10px;
+}
+.skill-progress.html {
+    width: 70%;
+}
+
+.skill-progress.css {
+    width: 60%;
+}
+
+.skill-progress.js{
+    width: 50%;
+}
+
+.skill-progress.c {
+    width: 70%;
+}
+
+.skill-progress.c_plus_plus {
+    width: 50%;
+}
+
+.skill-progress.c_sharp {
+    width: 50%;
+}
+
+.skill-progress.python {
+    width: 60%;
+}
+.skill-progress.java {
+    width: 30%;
+}
+/* =========================
+   PROJECT
+   ========================= */
+
+#project {
+    min-height: 100vh;
+    background-color: #242424;
+    color: white;
+    padding: 100px 40px;
+}
+
+.project-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project-container > h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 0 0 15px 0;
+}
+
+.project-description {
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    color: #999;
+    line-height: 1.7;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.project-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ffff;
+}
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.project-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.project-content p {
+    margin: 0 0 20px 0;
+    color: #999;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    padding: 6px 10px;
+    background-color: #2c2c2c;
+    border-radius: 15px;
+    color: #aaa;
+    font-size: 12px;
+}
+.project-content a {
+    margin-top: auto;
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.project-content a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+
+#contact {
+    min-height: 100vh;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 100px 40px;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.contact-container > h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 0 0 15px 0;
+}
+
+.contact-description {
+    max-width: 650px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+    color: #999;
+    line-height: 1.7;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: start;
+}
+.contact-info {
+    padding: 30px;
+    background-color: #242424;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.contact-info h3 {
+    margin: 0 0 30px 0;
+    font-size: 22px;
+}
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 25px;
+}
+
+.contact-item strong {
+    font-size: 14px;
+    color: #00ffff;
+}
+
+.contact-item span {
+    font-size: 14px;
+    color: #999;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #242424;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00ffff;
+}
+.contact-form button {
+    width: fit-content;
+    padding: 12px 25px;
+    background-color: #00ffff;
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact-form button:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+@media (max-width: 700px) {
+
+    #contact {
+        padding: 80px 20px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
 }
